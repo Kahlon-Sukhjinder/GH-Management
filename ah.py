@@ -6,6 +6,10 @@ from tabulate import tabulate
 docFormatInFile = 'id_name_specilist_timing_qualification_roomNb\n'
 labFormatInFile = 'Facility_Cost\n'
 patFormatInFile = 'id_Name_Disease_Gender_Age\n'
+filenames = {"doctor": "files/doctors.txt", 
+             "facility": "files/facilities.txt",
+             "lab": "files/laboratories.txt",
+             "patient": "files/patients.txt"}
 
 class Doctor:
     """ A class for representing and managing medical doctors information """
@@ -334,3 +338,154 @@ class Patient:
         return self.__gender
     def getAge(self):
         return self.__age
+
+
+class Management:
+    __lists = {"doctor": [], "facility": [], "lab": [], "patient": []}
+
+    __filenames = {"doctor": [], "facility": [], "lab": [], "patient": []}
+
+    def __init__(self, filenames:dict):
+        for key in filenames:
+            self.__filenames[key] = filenames[key]
+            if (key == "doctor"):
+                self.__lists[key] = Doctor.readDoctorFile(filenames[key])
+            elif (key == "facility"):
+                self.__lists[key] = Facility.readFacilitiesFile(filenames[key])
+            elif (key == "lab"):
+                self.__lists[key] = Laboratory.readLabFile(filenames[key])
+            elif (key == "patient"):
+                self.__lists[key] = Patient.readPatientFile(filenames[key])
+            else:
+                assert (False)
+
+    def displayMenu(self):
+        while (True):
+            menu = int(input("\nWelcome to Alberta Hospital (AH) Managment system\n"
+                             "Select from the following options, or select 0 to stop:\n"
+                             "1 -   Doctors\n"
+                             "2 -   Facilities\n"
+                             "3 -   Laboratories\n"
+                             "4 -   Patients\n"
+                             "> "))
+            if (menu == 1):
+                self.docMenu()
+            elif (menu == 2):
+                self.facMenu()
+            elif (menu == 3):
+                self.labMenu()
+            elif (menu == 4):
+                self.patMenu()
+            elif (menu == 0):
+                break
+            else:
+                print("Sorry, invalid option selected. Try again...\n")
+
+    def docMenu(self):
+        while (True):
+            menu = int(input("\nDoctors Menu:\n"
+                               "1 - Display Doctors list\n"
+                               "2 - Search for doctor by ID\n"
+                               "3 - Search for doctor by name\n"
+                               "4 - Add doctor\n"
+                               "5 - Edit doctor info\n"
+                               "6 - Back to the Main Menu\n"
+                               "> "))
+            if (menu == 1):
+                Doctor.displayDoctorsList(self.__lists["doctor"])
+            elif (menu == 2):
+                ID = int(input("Enter the doctor id: "))
+                doc = Doctor.searchDoctorById(ID, self.__lists["doctor"])
+                if (doc == None):
+                    print("Can't find the doctor with the given ID in the system")
+                else:
+                    doc.displayDoctorInfo()
+            elif (menu == 3):
+                name = input("Enter the doctor name: ")
+                doc = Doctor.searchDoctorByName(name, self.__list["doctor"])
+                if (doc == None):
+                    print("Can't find the doctor with the given name in the system")
+                else:
+                    doc.displayDoctorInfo()
+            elif (menu == 4):
+                self.__lists["doctor"].append(Doctor.enterDrInfo())
+            elif (menu == 5):
+                ID = int(input("Enter the id of the Doctor whose information you want to edit: "))
+                Doctor.editDoctorInfo(ID, self.__lists["doctor"])
+            elif(menu == 6):
+                break
+            else:
+                print("Sorry, invalid option selected. Try again...")
+
+            wait = input("\nPress return to continue...")
+            print("Back to the previous menu\n")
+
+    def facMenu(self):
+        while (True):
+            menu = int(input("\nFacilities Menu:\n"
+                               "1 - Display Facilities list\n"
+                               "2 - Add facility\n"
+                               "3 - Back to the main menu\n"))
+            if (menu == 1):
+                Facility.displayFacilities(self.__lists["facility"])
+            elif (menu == 2):
+                self.__lists["facility"].append(Facility.enterFacilityInfo())
+            elif (menu == 3):
+                break
+            else:
+                print("Sorry, invalid option selected. Try again...")
+
+            wait = input("\nPress return to continue...")
+            print("Back to the previous menu\n")
+
+
+    def labMenu(self):
+        while (True):
+            menu = int(input("\nLaboratories Menu:\n"
+                               "1 - Display laboratories list\n"
+                               "2 - Add laboratory\n"
+                               "3 - Back to the main menu\n"))
+            if (menu == 1):
+                Laboratory.displayLabsList(self.__lists["lab"])
+            elif (menu == 2):
+                self.__lists["lab"].append(Laboratory.enterLabInfo())
+            elif (menu == 3):
+                break
+            else:
+                print("Sorry, invalid option selected. Try again...")
+
+            wait = input("\nPress return to continue...")
+            print("Back to the previous menu\n")
+
+
+    def patMenu(self):
+        while (True):
+            menu = int(input("\nPatients Menu:\n"
+                               "1 - Display patients list\n"
+                               "2 - Search for patient by ID\n"
+                               "3 - Add patient\n"
+                               "4 - Edit patient info\n"
+                               "5 - Back to the main menu\n"))
+            if (menu == 1):
+                Patient.displayPatientsList(self.__lists["patient"])
+            elif (menu == 2):
+                pid = int(input("Enter the Patient ID: "))
+                pat = Patient.searchPatientById(ID, self.__lists["patient"])
+                if (pat == None):
+                    print("Can't find patient with the given ID in the system")
+                else:
+                    pat.displayPatientInfo()
+            elif (menu == 3):
+                self.__lists["patient"].append(Patient.enterPatientInfo())
+            elif (menu == 4):
+                pid = int(input("Enter the Id of patient whose info you want to edit: "))
+                Patient.editPatientInfo(pid, self.__lists["patient"])
+            elif (menu == 5):
+                break
+            else:
+                print("Sorry, invalid option selected. Try again...")
+
+            wait = input("\nPress return to continue...")
+            print("Back to the previous menu\n")
+
+
