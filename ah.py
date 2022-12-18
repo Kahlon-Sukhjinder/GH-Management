@@ -492,7 +492,7 @@ class Management:
             elif (menu == 3):
                 new_pat = Patient.enterPatientInfo()
                 self.__lists["patient"].append(new_pat)
-                new_pat.addPatientToFile(self.__lists["patient"])
+                new_pat.addPatientToFile(self.__filenames["patient"])
             elif (menu == 4):
                 pid = int(input("Enter the Id of patient whose info you want to edit: "))
                 Patient.editPatientInfo(pid, self.__lists["patient"])
