@@ -4,7 +4,7 @@ from tabulate import tabulate
 
 # Symbolic constants
 docFormatInFile = 'id_name_specilist_timing_qualification_roomNb\n'
-labFormatInFile = 'Facility_Cost\n'
+labFormatInFile = 'Lab_Cost\n'
 patFormatInFile = 'id_Name_Disease_Gender_Age\n'
 filenames = {"doctor": "files/doctors.txt", 
              "facility": "files/facilities.txt",
@@ -110,7 +110,7 @@ class Doctor:
 
     def addDrToFile(self, filename:str):
         docFile = open(filename, "a")
-        docFile.write(f"\n{self.formatDrInfo()}")
+        docFile.write(f"{self.formatDrInfo()}\n")
         docFile.close()
 
     @staticmethod
@@ -151,7 +151,7 @@ class Facility:
 
     def addFacility(self, filename:str):
         facFile = open(filename, "a")
-        facFile.write(f"\n{str(self)}")
+        facFile.write(f"{str(self)}\n")
         facFile.close()
 
     @classmethod
@@ -224,7 +224,7 @@ class Laboratory:
 
     def addLabToFile(self, filename:str):
         labFile = open(filename, "a")
-        labFile.write(f"\n{self.formatLabInfo()}")
+        labFile.write(f"{self.formatLabInfo()}\n")
         labFile.close()
 
     @staticmethod
@@ -317,7 +317,7 @@ class Patient:
 
     def addPatientToFile(self, filename:str):
         patFile = open(filename, "a")
-        patFile.write(f"\n{self.formatPatientInfo()}")
+        patFile.write(f"{self.formatPatientInfo()}\n")
         patFile.close()
 
     @staticmethod
@@ -409,10 +409,13 @@ class Management:
                 else:
                     doc.displayDoctorInfo()
             elif (menu == 4):
-                self.__lists["doctor"].append(Doctor.enterDrInfo())
+                new_doc = Doctor.enterDrInfo()
+                self.__lists["doctor"].append(new_doc)
+                new_doc.addDrToFile(self.__filenames["doctor"])
             elif (menu == 5):
                 ID = int(input("Enter the id of the Doctor whose information you want to edit: "))
                 Doctor.editDoctorInfo(ID, self.__lists["doctor"])
+                Doctor.writeListOfDoctorsToFile(self.__lists["doctor"], self.__filenames["doctor"])
             elif(menu == 6):
                 break
             else:
@@ -432,7 +435,9 @@ class Management:
             if (menu == 1):
                 Facility.displayFacilities(self.__lists["facility"])
             elif (menu == 2):
-                self.__lists["facility"].append(Facility.enterFacilityInfo())
+                new_fac = Facility.enterFacilityInfo()
+                self.__lists["facility"].append(new_fac)
+                new_fac.addFacility(self.__filenames["facility"])
             elif (menu == 3):
                 break
             else:
@@ -453,7 +458,9 @@ class Management:
             if (menu == 1):
                 Laboratory.displayLabsList(self.__lists["lab"])
             elif (menu == 2):
-                self.__lists["lab"].append(Laboratory.enterLabInfo())
+                new_lab = Laboratory.enterLabInfo()
+                self.__lists["lab"].append(new_lab)
+                new_lab.addLabToFile(self.__filenames["lab"])
             elif (menu == 3):
                 break
             else:
@@ -483,10 +490,13 @@ class Management:
                 else:
                     pat.displayPatientInfo()
             elif (menu == 3):
-                self.__lists["patient"].append(Patient.enterPatientInfo())
+                new_pat = Patient.enterPatientInfo()
+                self.__lists["patient"].append(new_pat)
+                new_pat.addPatientToFile(self.__lists["patient"])
             elif (menu == 4):
                 pid = int(input("Enter the Id of patient whose info you want to edit: "))
                 Patient.editPatientInfo(pid, self.__lists["patient"])
+                Patient.writePatientsListToFile(self.__lists["patient"], self.__filenames["patient"])
             elif (menu == 5):
                 break
             else:

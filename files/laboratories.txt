@@ -1,5 +1,5 @@
-Facility_Cost
-Facility1_800
-Facility2_1200
-Facility3_500
-Facility4_50
+Lab_Cost
+Lab1_800.00
+Lab2_1200.00
+Lab3_500.00
+Lab4_50.00

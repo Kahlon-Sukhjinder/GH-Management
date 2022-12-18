@@ -1,5 +1,5 @@
 id_Name_Disease_Gender_Age
-12_Pankaj_Cancer_Male_30
-13_Sumit_Cold_Male_23
-14_Alok_Maleriya_Male_45
-15_Ravi_Diabetes_Male_25
+12_Pankaj_Cancer_Cancer_30
+13_Sumit_Cold_Cold_23
+14_Alok_Maleriya_Maleriya_45
+15_Ravi_Diabetes_Diabetes_25
