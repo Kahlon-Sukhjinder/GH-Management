@@ -391,6 +391,7 @@ class Management:
                                "5 - Edit doctor info\n"
                                "6 - Back to the Main Menu\n"
                                "> "))
+            print()
             if (menu == 1):
                 Doctor.displayDoctorsList(self.__lists["doctor"])
             elif (menu == 2):
@@ -425,7 +426,9 @@ class Management:
             menu = int(input("\nFacilities Menu:\n"
                                "1 - Display Facilities list\n"
                                "2 - Add facility\n"
-                               "3 - Back to the main menu\n"))
+                               "3 - Back to the main menu\n"
+                               "> "))
+            print()
             if (menu == 1):
                 Facility.displayFacilities(self.__lists["facility"])
             elif (menu == 2):
@@ -444,7 +447,9 @@ class Management:
             menu = int(input("\nLaboratories Menu:\n"
                                "1 - Display laboratories list\n"
                                "2 - Add laboratory\n"
-                               "3 - Back to the main menu\n"))
+                               "3 - Back to the main menu\n"
+                               "> "))
+            print()
             if (menu == 1):
                 Laboratory.displayLabsList(self.__lists["lab"])
             elif (menu == 2):
@@ -465,7 +470,9 @@ class Management:
                                "2 - Search for patient by ID\n"
                                "3 - Add patient\n"
                                "4 - Edit patient info\n"
-                               "5 - Back to the main menu\n"))
+                               "5 - Back to the main menu\n"
+                               "> "))
+            print()
             if (menu == 1):
                 Patient.displayPatientsList(self.__lists["patient"])
             elif (menu == 2):
