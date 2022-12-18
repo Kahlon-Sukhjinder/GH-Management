@@ -3,3 +3,4 @@ Ambulance
 Admit Facility
 Canteen
 Emergency
+Covid Care

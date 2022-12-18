@@ -1,0 +1,495 @@
+
+Welcome to Alberta Hospital (AH) Managment system
+Select from the following options, or select 0 to stop:
+1 -   Doctors
+2 -   Facilities
+3 -   Laboratories
+4 -   Patients
+> 1
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 1
+
++------+-----------+------------------+----------+-----------------+------------+
+|   ID | Name      | Specialization   | Timing   | Qualification   |   Room No. |
++======+===========+==================+==========+=================+============+
+|   21 | Dr.Gody   | ENT              | 5-11AM   | MBBS,MD         |         17 |
++------+-----------+------------------+----------+-----------------+------------+
+|   32 | Dr.Vikram | Physician        | 10-3AM   | MBBS,MD         |         45 |
++------+-----------+------------------+----------+-----------------+------------+
+|   17 | Dr.Amy    | Surgeon          | 8-2AM    | BDM             |          8 |
++------+-----------+------------------+----------+-----------------+------------+
+|   33 | Dr.David  | Artho            | 10-4PM   | MBBS,MS         |         40 |
++------+-----------+------------------+----------+-----------------+------------+
+|  123 | Dr. Ross  | Headackes        | 8-10am   | Mst             |        102 |
++------+-----------+------------------+----------+-----------------+------------+
+|   66 | Dr. Mike  | Heart            | 9am-5pm  | MS              |          2 |
++------+-----------+------------------+----------+-----------------+------------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 2
+
+Enter the doctor id: 66
++------+----------+------------------+----------+-----------------+------------+
+|   ID | Name     | Specialization   | Timing   | Qualification   |   Room No. |
++======+==========+==================+==========+=================+============+
+|   66 | Dr. Mike | Heart            | 9am-5pm  | MS              |          2 |
++------+----------+------------------+----------+-----------------+------------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 3
+
+Enter the doctor name: Dr.David
++------+----------+------------------+----------+-----------------+------------+
+|   ID | Name     | Specialization   | Timing   | Qualification   |   Room No. |
++======+==========+==================+==========+=================+============+
+|   33 | Dr.David | Artho            | 10-4PM   | MBBS,MS         |         40 |
++------+----------+------------------+----------+-----------------+------------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 2
+
+Enter the doctor id: 20
+Can't find the doctor with the given ID in the system
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 3
+
+Enter the doctor name: Dr. Tom
+Can't find the doctor with the given name in the system
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 4
+
+Enter the doctor’s ID: 62
+
+Enter the doctor’s name: Dr. Smith
+
+Enter the doctor’s speciality: Heart
+
+Enter the doctor’s timing (e.g., 7am-10pm): 6am-11am
+
+Enter the doctor’s qualification: PhD
+
+Enter the doctor’s room number: 12
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 5
+
+Enter the id of the Doctor whose information you want to edit: 66
+
+Enter new name: Dr. Mike Kale
+
+Enter new speciality: Heart
+
+Enter new timing (e.g., 7am-10pm): 9am-3pm
+
+Enter new qualification: MS
+
+Enter new room number: 2
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 1
+
++------+---------------+------------------+----------+-----------------+------------+
+|   ID | Name          | Specialization   | Timing   | Qualification   |   Room No. |
++======+===============+==================+==========+=================+============+
+|   21 | Dr.Gody       | ENT              | 5-11AM   | MBBS,MD         |         17 |
++------+---------------+------------------+----------+-----------------+------------+
+|   32 | Dr.Vikram     | Physician        | 10-3AM   | MBBS,MD         |         45 |
++------+---------------+------------------+----------+-----------------+------------+
+|   17 | Dr.Amy        | Surgeon          | 8-2AM    | BDM             |          8 |
++------+---------------+------------------+----------+-----------------+------------+
+|   33 | Dr.David      | Artho            | 10-4PM   | MBBS,MS         |         40 |
++------+---------------+------------------+----------+-----------------+------------+
+|  123 | Dr. Ross      | Headackes        | 8-10am   | Mst             |        102 |
++------+---------------+------------------+----------+-----------------+------------+
+|   66 | Dr. Mike Kale | Heart            | 9am-3pm  | MS              |          2 |
++------+---------------+------------------+----------+-----------------+------------+
+|   62 | Dr. Smith     | Heart            | 6am-11am | PhD             |         12 |
++------+---------------+------------------+----------+-----------------+------------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Doctors Menu:
+1 - Display Doctors list
+2 - Search for doctor by ID
+3 - Search for doctor by name
+4 - Add doctor
+5 - Edit doctor info
+6 - Back to the Main Menu
+> 6
+
+
+Welcome to Alberta Hospital (AH) Managment system
+Select from the following options, or select 0 to stop:
+1 -   Doctors
+2 -   Facilities
+3 -   Laboratories
+4 -   Patients
+> 2
+
+Facilities Menu:
+1 - Display Facilities list
+2 - Add facility
+3 - Back to the main menu
+> 1
+
+The Hospital Facilities are:
+
+Ambulance
+Admit Facility
+Canteen
+Emergency
+
+Press return to continue...
+Back to the previous menu
+
+
+Facilities Menu:
+1 - Display Facilities list
+2 - Add facility
+3 - Back to the main menu
+> 2
+
+Enter facility name: Covid Care
+
+Press return to continue...
+Back to the previous menu
+
+
+Facilities Menu:
+1 - Display Facilities list
+2 - Add facility
+3 - Back to the main menu
+> 1
+
+The Hospital Facilities are:
+
+Ambulance
+Admit Facility
+Canteen
+Emergency
+Covid Care
+
+Press return to continue...
+Back to the previous menu
+
+
+Facilities Menu:
+1 - Display Facilities list
+2 - Add facility
+3 - Back to the main menu
+> 3
+
+
+Welcome to Alberta Hospital (AH) Managment system
+Select from the following options, or select 0 to stop:
+1 -   Doctors
+2 -   Facilities
+3 -   Laboratories
+4 -   Patients
+> 3
+
+Laboratories Menu:
+1 - Display laboratories list
+2 - Add laboratory
+3 - Back to the main menu
+> 1
+
++-------+--------+
+| Lab   |   Cost |
++=======+========+
+| Lab1  |    800 |
++-------+--------+
+| Lab2  |   1200 |
++-------+--------+
+| Lab3  |    500 |
++-------+--------+
+| Lab4  |     50 |
++-------+--------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Laboratories Menu:
+1 - Display laboratories list
+2 - Add laboratory
+3 - Back to the main menu
+> 2
+
+Enter Laboratory facility: Lab5
+Enter Laboratory cost: 250
+
+Press return to continue...
+Back to the previous menu
+
+
+Laboratories Menu:
+1 - Display laboratories list
+2 - Add laboratory
+3 - Back to the main menu
+> 1
+
++-------+--------+
+| Lab   |   Cost |
++=======+========+
+| Lab1  |    800 |
++-------+--------+
+| Lab2  |   1200 |
++-------+--------+
+| Lab3  |    500 |
++-------+--------+
+| Lab4  |     50 |
++-------+--------+
+| Lab5  |    250 |
++-------+--------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Laboratories Menu:
+1 - Display laboratories list
+2 - Add laboratory
+3 - Back to the main menu
+> 3
+
+
+Welcome to Alberta Hospital (AH) Managment system
+Select from the following options, or select 0 to stop:
+1 -   Doctors
+2 -   Facilities
+3 -   Laboratories
+4 -   Patients
+> 4
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 1
+
++------+--------+-----------+----------+-------+
+|   ID | Name   | Disease   | Gender   |   Age |
++======+========+===========+==========+=======+
+|   12 | Pankaj | Cancer    | Cancer   |    30 |
++------+--------+-----------+----------+-------+
+|   13 | Sumit  | Cold      | Cold     |    23 |
++------+--------+-----------+----------+-------+
+|   14 | Alok   | Maleriya  | Maleriya |    45 |
++------+--------+-----------+----------+-------+
+|   15 | Ravi   | Diabetes  | Diabetes |    25 |
++------+--------+-----------+----------+-------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 2
+
+Enter the Patient ID: 16
+Can't find patient with the given ID in the system
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 15
+
+Sorry, invalid option selected. Try again...
+
+Press return to continue...2
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 2
+
+Enter the Patient ID: 15
++------+--------+-----------+----------+-------+
+|   ID | Name   | Disease   | Gender   |   Age |
++======+========+===========+==========+=======+
+|   15 | Ravi   | Diabetes  | Diabetes |    25 |
++------+--------+-----------+----------+-------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 3
+
+Enter Patient id: 16
+Enter Patient name: Mary
+Enter Patient disease: Cancer
+Enter Patient gender: Female
+Enter Patient age: 55
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 4
+
+Enter the Id of patient whose info you want to edit: 13
+Enter new name: Janina
+Enter new disease: Cold&Flu
+Enter new gender: Female
+Enter new age: 23
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 1
+
++------+--------+-----------+----------+-------+
+|   ID | Name   | Disease   | Gender   |   Age |
++======+========+===========+==========+=======+
+|   12 | Pankaj | Cancer    | Cancer   |    30 |
++------+--------+-----------+----------+-------+
+|   13 | Janina | Cold&Flu  | Cold&Flu |    23 |
++------+--------+-----------+----------+-------+
+|   14 | Alok   | Maleriya  | Maleriya |    45 |
++------+--------+-----------+----------+-------+
+|   15 | Ravi   | Diabetes  | Diabetes |    25 |
++------+--------+-----------+----------+-------+
+|   16 | Mary   | Cancer    | Cancer   |    55 |
++------+--------+-----------+----------+-------+
+
+Press return to continue...
+Back to the previous menu
+
+
+Patients Menu:
+1 - Display patients list
+2 - Search for patient by ID
+3 - Add patient
+4 - Edit patient info
+5 - Back to the main menu
+> 5
+
+
+Welcome to Alberta Hospital (AH) Managment system
+Select from the following options, or select 0 to stop:
+1 -   Doctors
+2 -   Facilities
+3 -   Laboratories
+4 -   Patients
+> 0

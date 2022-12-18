@@ -1,5 +1,6 @@
 id_Name_Disease_Gender_Age
 12_Pankaj_Cancer_Cancer_30
-13_Sumit_Cold_Cold_23
+13_Janina_Cold&Flu_Cold&Flu_23
 14_Alok_Maleriya_Maleriya_45
 15_Ravi_Diabetes_Diabetes_25
+16_Mary_Cancer_Cancer_55
